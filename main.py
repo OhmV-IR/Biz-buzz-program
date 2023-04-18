@@ -1,13 +1,16 @@
 #ask for user input
-AmountOfNumbersToPrint = input("How many numbers do you want to print: ")
-#initialize array
+invalidinput = True
+while(invalidinput):
+    AmountOfNumbersToPrint = input("How many numbers do you want to print: ")
+    #initialize array
+    # error catching(if try fails run except)
+    invalidinput = False
+    try:
+        AmountOfNumbersToPrint = int(AmountOfNumbersToPrint)
+    except:
+        print("Amount of numbers to print is invalid")
+        invalidinput = True
 arrToPrint = ["Bizz buzz sequence: "]
-# error catching(if try fails run except)
-try:
-    AmountOfNumbersToPrint = int(AmountOfNumbersToPrint)
-except:
-    print("Amount of numbers to print is invalid")
-    exit()
 # i is a counter variable
 for i in range(AmountOfNumbersToPrint):
     #if the current number is not divisible by 5 and 3 then check if divisible by 3
