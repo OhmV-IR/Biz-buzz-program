@@ -12,7 +12,7 @@ while(invalidinput):
         invalidinput = True
 arrToPrint = ["Bizz buzz sequence: "]
 # i is a counter variable
-for i in range(AmountOfNumbersToPrint):
+for i in range(1, AmountOfNumbersToPrint + 1):
     #if the current number is not divisible by 5 and 3 then check if divisible by 3
     # then check if it is divisible by 5
     if(i % 3 == 0 and i % 5 == 0):
@@ -31,5 +31,6 @@ for i in range(AmountOfNumbersToPrint):
 # remove all quotation marks and brackets from string
 output = str(arrToPrint).replace("'",'',100000000)
 output = output.replace("[]",'',1000000000)
+output = output.replace(",","", 1000000000)
 #print final string
 print(output)
